@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply font-sans antialiased text-slate bg-navy;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-sans text-slate-lightest;
+}
+
+a {
+  @apply cursor-pointer text-green;
+}
+li {
+  @apply font-mono;
+}
+
+@layer components {
+  .btn-lg {
+    @apply inline-block py-6 px-12 font-mono text-lg border rounded-[4px] text-green mt-12 border-green hover:-translate-x-1 hover:-translate-y-1 transition-all hover:shadow-outline-green;
+  }
+  .btn {
+    @apply inline-block py-4 font-mono text-sm border rounded-[4px] text-green mt-12 px-7 border-green hover:-translate-x-1 hover:-translate-y-1 transition-all hover:shadow-outline-green;
+  }
+  .btn-sm {
+    @apply inline-block py-2 px-4 font-mono text-sm border rounded-[4px] text-green mt-12 border-green hover:-translate-x-1 hover:-translate-y-1 transition-all hover:shadow-outline-green;
+  }
+}
+.vertical-rl {
+  writing-mode: vertical-rl;
+}
+
+/* for underline anchor */
+a {
+  position: relative;
+  text-decoration: none;
+}
+
+a::before,
+a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: center bottom;
+  transition: transform 0.15s ease-out;
+}
+
+a::before {
+  left: 0;
+}
+
+a::after {
+  right: 0;
+}
+
+a:hover::before,
+a:hover::after {
+  transform: scaleX(1);
+}
+/* end */
+.reset-link::after,
+.reset-link::before {
+  content: none;
+}
+/* 
+  filter on image multiply blend mode
+*/
+.filter-multiply {
+  mix-blend-mode: multiply;
+  filter: grayscale(100%) contrast(1) brightness(90%);
+}
+.fill-mode-forwards {
+  animation-fill-mode: forwards;
+}
