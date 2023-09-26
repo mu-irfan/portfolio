@@ -11,6 +11,7 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <Head>
+        <title>Muhammad Irfan</title>
         <meta property="og:title" content="Muhammad Irfan" />
         <meta property="og:description" content="Muhammad Irfan portfolio" />
         <meta property="og:image" content="/images/OT.png" />
