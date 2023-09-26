@@ -12,9 +12,11 @@ export default async function RootLayout({
     <html lang="en">
       <Head>
         <title>Muhammad Irfan</title>
+        <meta property="og:type" content="website" />
         <meta property="og:title" content="Muhammad Irfan" />
         <meta property="og:description" content="Muhammad Irfan portfolio" />
-        <meta property="og:image" content="/public/images/OG.png" />
+        <meta property="og:url" content="https://muhammad-irfan.vercel.app/" />
+        <meta property="og:image" content="../../public/images/OG.png" />
       </Head>
       <body
         className={`${inter.variable} ${firaCode.variable} ${calibre.variable} ${sfMono.variable}`}
