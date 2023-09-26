@@ -1,26 +1,18 @@
 import "../globals.css";
-
 import { calibre, firaCode, inter, sfMono } from "@/config/fonts";
 import { Footer, Navbar, Sides } from "@/components";
 import Head from "next/head";
-import sanityClient from "@/sanity/config/client";
-import { HomePage } from "@/types";
 
 export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const data = await sanityClient.fetch(`*[_type in ["homePage"]]`);
-  const homePage: HomePage = data.find(
-    (item: any) => item._type === "homePage"
-  );
-
   return (
     <html lang="en">
       <Head>
-        <meta property="og:title" content={homePage.seo.title} />
-        <meta property="og:description" content={homePage.seo.description} />
+        <meta property="og:title" content="Muhammad Irfan" />
+        <meta property="og:description" content="Muhammad Irfan portfolio" />
         <meta property="og:image" content="/images/OT.png" />
       </Head>
       <body

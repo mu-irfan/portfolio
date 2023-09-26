@@ -48,7 +48,7 @@ export const Navbar: React.FC<IHeaderProps> = ({ className }) => {
         <div className="relative">
           <Link href="/" className="reset-link">
             <Image
-              src="/images/header-logo.png"
+              src="/images/header.png"
               width={43}
               height={45}
               alt="logo"

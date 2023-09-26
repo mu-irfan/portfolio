@@ -1,11 +1,10 @@
+"use client";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { FiGithub, FiExternalLink } from "react-icons/fi";
+import { FiExternalLink } from "react-icons/fi";
 import cn from "classnames";
 import { Project } from "@/types";
-import { urlFor } from "@/sanity/utils";
-import { PortableText } from "@portabletext/react";
 
 interface IProps {
   direction?: "left" | "right";
@@ -15,6 +14,7 @@ const Card: React.FC<IProps> = ({ direction = "left", project }) => {
   if (!project) {
     return null;
   }
+
   return (
     <div className="z-20 w-full rounded lg:grid lg:grid-cols-12 lg:items-center bg-green/5 lg:bg-transparent">
       {/* Preview */}
@@ -26,10 +26,10 @@ const Card: React.FC<IProps> = ({ direction = "left", project }) => {
             : "lg:col-start-6 lg:col-end-13"
         )}
       >
-        {project?.image && (
+        {project?.imageSrc && (
           <Image
-            src={urlFor(project.image).url()}
-            alt={project.image.alt || ""}
+            src={project.imageSrc.src}
+            alt={project.imageSrc.alt || ""}
             width={800}
             height={600}
             className="object-cover w-full h-full transition duration-150 cursor-pointer filter-multiply group-hover:filter-none"
@@ -53,18 +53,9 @@ const Card: React.FC<IProps> = ({ direction = "left", project }) => {
         <h3 className="text-2xl font-semibold sm:text-3xl hover:text-green">
           {project.name}
         </h3>
-        <PortableText
-          value={project.content}
-          components={{
-            block: {
-              normal: ({ children }) => (
-                <p className="right-0 text-lg transition-all duration-300 delay-75 lg:-mr-2 lg:hover:shadow-card-navy-hover lg:shadow-card-navy my-7 lg:p-6 lg:rounded lg:bg-navy-light text-slate-lightest">
-                  {children}
-                </p>
-              ),
-            },
-          }}
-        />
+        <p className="right-0 text-lg transition-all duration-300 delay-75 lg:-mr-2 lg:hover:shadow-card-navy-hover lg:shadow-card-navy my-7 lg:p-6 lg:rounded lg:bg-navy-light text-slate-lightest">
+          {project.description}
+        </p>
         <ul
           className={cn(
             "text-[13px] font-mono text-slate-lightest flex space-x-2 lg:space-x-5",
@@ -90,7 +81,7 @@ const Card: React.FC<IProps> = ({ direction = "left", project }) => {
         >
           <li>
             <Link
-              href={project.url}
+              href={project.source}
               target="_blank"
               className="transition-all reset-link text-slate-lightest hover:text-green"
             >

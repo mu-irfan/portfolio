@@ -1,18 +1,11 @@
 "use client";
-import { BLOGS } from "@/config/constants";
 import Link from "next/link";
 import React from "react";
 import { BiArrowBack } from "react-icons/bi";
-import sanityClient from "@/sanity/config/client";
-import { BlogPage } from "@/types";
-import { PortableText } from "@portabletext/react";
+import { BLOGS_DATA } from "@/config/constants";
 
 export default async function page({ params }: { params: { id: string } }) {
-  const blogsData = await sanityClient.fetch(`*[_type in ["blogs"]]`);
-  const blogs: BlogPage[] = blogsData.filter(
-    (item: any) => item._type === "blogs"
-  );
-  const data = blogs.find((blog) => blog.slug.current === params.id);
+  const data = BLOGS_DATA.find((blog) => blog.slug.current === params.id);
   if (!data) {
     return <div>Blog not found!</div>;
   }
@@ -42,51 +35,10 @@ export default async function page({ params }: { params: { id: string } }) {
       >
         Codepen Demo
       </Link>
-      <PortableText
-        value={data.content}
-        components={{
-          block: {
-            normal: ({ children }) => (
-              <h2 className="text-slate-lightest  font-medium text-xl pt-10">
-                {children}
-              </h2>
-            ),
-          },
-        }}
-      />
+      <p className="text-slate-lightest  font-medium text-xl pt-10">{data.description}</p>
       <h1 className="flex items-center text-left text-[26px] sm:text-3xl md:text-[30px] font-semibold mt-12 mb-10">
-        {data.codeTechnology}
+        {data.name}
       </h1>
-      <div className="bg-[#112340] mb-32">
-        <PortableText
-          value={data.code}
-          components={{
-            block: {
-              normal: ({ children }) => (
-                <pre className="code-highlight rounded-lg text-sm px-5 text-[#50B3CB] py-8">
-                  {children
-                    ?.toString()
-                    .split(/\b/)
-                    .map((codePart, index) => (
-                      <span
-                        key={index}
-                        className={
-                          codePart.match(/^\w+$/)
-                            ? "text-violet-400"
-                            : codePart.startsWith("") && codePart.endsWith("")
-                            ? "text-blue-400"
-                            : ""
-                        }
-                      >
-                        {codePart}
-                      </span>
-                    ))}
-                </pre>
-              ),
-            },
-          }}
-        />
-      </div>
     </div>
   );
 }

@@ -5,6 +5,7 @@ import { Button } from "@/components/ui";
 import Link from "next/link";
 import { Project } from "@/types";
 
+
 export const NoteworthyProject: React.FC<{ data: Project[] }> = ({ data }) => {
   const [intialProject, setInitialProject] = useState(6);
   const [toggledProject, setToggledProject] = useState(false);

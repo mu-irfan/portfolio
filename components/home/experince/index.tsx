@@ -3,9 +3,9 @@ import React, { useState, useEffect, useRef } from "react";
 import cn from "classnames";
 import { BiRightArrow } from "react-icons/bi";
 import Link from "next/link";
-import { Experince as ExperinceType } from "@/types";
+import { WORKED_HISTORY } from "@/config/constants";
 
-export const Experince: React.FC<{ data: ExperinceType[] }> = ({ data }) => {
+export const Experince = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const tabRef = useRef<HTMLDivElement>(null);
 
@@ -39,7 +39,7 @@ export const Experince: React.FC<{ data: ExperinceType[] }> = ({ data }) => {
 
       <div className="flex flex-col md:flex-row pt-6 md:pb-40 max-w-3xl md:pl-6 mx-auto">
         <div className="flex md:hidden overflow-x-auto border-b-2  border-[#19325c]">
-          {data.map((comp, index) => (
+          {WORKED_HISTORY.map((comp, index) => (
             <div
               key={index}
               className={cn("flex", {
@@ -59,13 +59,15 @@ export const Experince: React.FC<{ data: ExperinceType[] }> = ({ data }) => {
                 )}
                 onClick={() => handleTabChange(index)}
               >
-                {comp.companyName}
+                {comp.tab.map((tab, index) => (
+                  <span key={index}>{tab.tabTitle}</span>
+                ))}
               </button>
             </div>
           ))}
         </div>
         <div className="hidden md:inline md:w-[22%]">
-          {data.map((comp, index) => (
+          {WORKED_HISTORY.map((comp, index) => (
             <div
               key={index}
               className={cn("flex", {
@@ -89,13 +91,15 @@ export const Experince: React.FC<{ data: ExperinceType[] }> = ({ data }) => {
                 )}
                 onClick={() => handleTabChange(index)}
               >
-                {comp.companyName}
+                {comp.tab.map((tab, index) => (
+                  <span key={index}>{tab.tabTitle}</span>
+                ))}
               </button>
             </div>
           ))}
         </div>
         <div className="md:w-4/4 mt-10 md:mt-0">
-          {data.map((comp, index) => (
+          {WORKED_HISTORY.map((comp, index) => (
             <div
               key={index}
               ref={tabRef}
@@ -106,31 +110,46 @@ export const Experince: React.FC<{ data: ExperinceType[] }> = ({ data }) => {
                 { "opacity-0": activeIndex !== index }
               )}
             >
-              <h2 className="text-2xl font-semibold">
-                {comp.role} at
-                <span key={comp._id}>
-                  <Link
-                    href={comp.url}
-                    target="_blank"
-                    className="text-[20px] font-semibold text-green pl-1"
-                  >
-                    {comp.companyName}
-                  </Link>{" "}
-                </span>
-              </h2>
-              <span className="text-sm font-mono">{comp.duration}</span>
-              <div className="max-w-[530px] grid grid-cols-1 py-4  md:p-4 gap-2">
-                {comp.highlights.map((highlight, index) => (
-                  <div
-                    key={index}
-                    className="flex items-start gap-4 md:gap-x-2"
-                  >
-                    <BiRightArrow className="w-2.5 h-2.5 text-green flex-shrink-0 mt-1" />
-                    <span className="text-[18px] md:text-[18px] leading-6 ">
-                      {highlight}
+              {comp.tab.map((tab, index) => (
+                <h2 className="text-2xl font-semibold" key={index}>
+                  {tab.tabContent.map(
+                    (content, index) => `${content.title} at`
+                  )}
+                  {tab.tabContent.map((content, index) => (
+                    <span key={index}>
+                      <Link
+                        href={content.link}
+                        target="_blank"
+                        className="text-[20px] font-semibold text-green pl-1"
+                      >
+                        {content.linkText}
+                      </Link>{" "}
                     </span>
-                  </div>
-                ))}
+                  ))}
+                </h2>
+              ))}
+
+              {comp.tab.map((tab, index) => (
+                <span className="text-sm font-mono" key={index}>
+                  {tab.tabContent.map((content) => `${content.date}`)}
+                </span>
+              ))}
+              <div className="max-w-[530px] grid grid-cols-1 py-4  md:p-4 gap-2">
+                {comp.tab.map((highlight) =>
+                  highlight.tabContent.map((content, index) =>
+                    content.content.map((content) => (
+                      <div
+                        key={index}
+                        className="flex items-start gap-4 md:gap-x-2"
+                      >
+                        <BiRightArrow className="w-2.5 h-2.5 text-green flex-shrink-0 mt-1" />
+                        <span className="text-[18px] md:text-[18px] leading-6 ">
+                          {content}
+                        </span>
+                      </div>
+                    ))
+                  )
+                )}
               </div>
             </div>
           ))}

@@ -1,16 +1,15 @@
 import Link from "next/link";
 import React from "react";
-import { FiGithub, FiExternalLink } from "react-icons/fi";
+import { FiExternalLink } from "react-icons/fi";
 import { CiFolderOn } from "react-icons/ci";
 import { Project } from "@/types";
-import { PortableText } from "@portabletext/react";
 
 export const Projects: React.FC<{ project: Project }> = ({ project }) => {
   if (!project) {
     return null;
   }
   return (
-    <Link target="_blank" href={project.url} className="reset-link">
+    <Link target="_blank" href={project.source} className="reset-link">
       <div className="group bg-[#112240] text-white flex flex-col justify-between rounded-[4px] px-7 py-9 h-full transition-all duration-300 transform hover:-translate-y-2">
         <div className="flex flex-col justify-between">
           <div>
@@ -25,18 +24,9 @@ export const Projects: React.FC<{ project: Project }> = ({ project }) => {
             <h2 className="text-[1.4rem] leading-[26px] font-semibold transition-colors group-hover:text-green">
               {project.name}
             </h2>
-            <PortableText
-              value={project.content}
-              components={{
-                block: {
-                  normal: ({ children }) => (
-                    <p className="text-[18px] leading-[22px] py-2 text-slate-light">
-                      {children}
-                    </p>
-                  ),
-                },
-              }}
-            />
+            <p className="text-[18px] leading-[22px] py-2 text-slate-light">
+              {project.description}
+            </p>
           </div>
         </div>
         <div className="">

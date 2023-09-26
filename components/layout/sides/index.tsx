@@ -12,7 +12,7 @@ export const Sides = () => {
       </Side>
       <Side direction="right">
         <Link
-          href="mailto:sulemank97@gmail.com"
+          href="mailto:irfan.dev34@gmail.com"
           className="reset-link py-5 font-mono text-xs tracking-[0.16rem] text-slate-light vertical-rl hover:-translate-y-1 hover:text-green transition-all"
         >
           {EMAIL}

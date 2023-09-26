@@ -1,13 +1,9 @@
 "use client";
-import Link from "next/link";
 import { motion } from "framer-motion";
-import { PortableText } from "@portabletext/react";
 import { Button } from "@/components/ui";
-import { HeroSection as HeroSectionType } from "@/types";
-
 import { NAVIGATION_LINKS } from "@/config/constants";
 
-export const HeroSection: React.FC<{ data: HeroSectionType }> = ({ data }) => {
+export const HeroSection = () => {
   const COMPONENT_DELAY = NAVIGATION_LINKS.length * 0.2 + 0.2;
 
   return (
@@ -37,7 +33,7 @@ export const HeroSection: React.FC<{ data: HeroSectionType }> = ({ data }) => {
         }}
         className="text-[40px] leading-[0.9] sm:text-5xl  md:text-6xl lg:text-[80px] font-semibold text-slate-lightest mb-2 lg:mb-1"
       >
-        Suleman Khan.
+        Muhammad Irfan.
       </motion.h1>
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
@@ -48,7 +44,7 @@ export const HeroSection: React.FC<{ data: HeroSectionType }> = ({ data }) => {
         }}
         className="text-[40px] leading-[0.9] sm:text-5xl  md:text-6xl lg:text-[80px] font-semibold text-slate"
       >
-        {data.tagline}
+        I build things for web
       </motion.h2>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -59,7 +55,11 @@ export const HeroSection: React.FC<{ data: HeroSectionType }> = ({ data }) => {
         }}
         className="text-lg sm:text-xl sm:leading-tight leading-[24px] sm:max-w-xl text-slate mt-5"
       >
-        <PortableText value={data.description} />
+        A passionate software engineer, and web developer. Specializing in web
+        technologies and frameworks like React and NextJS, I bring 1.5 years
+        of expertise to the table. I excel in crafting efficient and visually
+        stunning web experiences. I&apos;m currently looking for Frontend
+        developer role.
       </motion.div>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -70,10 +70,12 @@ export const HeroSection: React.FC<{ data: HeroSectionType }> = ({ data }) => {
         }}
       >
         <Button
-          className="mt-12"
-          onClick={() => window.open(data.callToAction.url, "_blank")}
+          className="mt-10"
+          onClick={() =>
+            window.open("https://www.linkedin.com/in/mu-irfan88/", "_blank")
+          }
         >
-          {data.callToAction.label}
+         Check my LinkedIn profile
         </Button>
       </motion.div>
     </motion.section>

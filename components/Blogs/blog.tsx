@@ -1,9 +1,12 @@
 import React from "react";
 import Link from "next/link";
 import Blog from "./BlogCard/index";
-import { BlogPage } from "@/types";
 
-const Blogs: React.FC<{ data: BlogPage[] }> = ({ data }) => {
+interface IProps {
+  data: any;
+}
+
+const Blogs = ({ data }: IProps) => {
   return (
     <div>
       <div className="text-center">

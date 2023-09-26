@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-
 import { Social } from "@/components/ui";
 
 export const Footer = () => {
@@ -11,7 +10,7 @@ export const Footer = () => {
         href="/"
         className="inline-block font-mono transition-all text-slate-light reset-link hover:text-green"
       >
-        Designed & Built by Brittany Chiang
+        Designed & Built by Muhammad Irfan
       </Link>
     </footer>
   );

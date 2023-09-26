@@ -17,75 +17,39 @@ export const NAVIGATION_LINKS = [
   },
 ];
 
-export const EMAIL = "sulemank97@gmail.com";
+export const EMAIL = "irfan.dev34@gmail.com";
 export const SOCIAL_LINKS = [
   {
     name: "github",
-    url: "https://github.com/sulemankhann",
+    url: "https://github.com/mu-irfan",
   },
   {
     name: "twitter",
-    url: "https://twitter.com/thesuleman",
+    url: "https://twitter.com/mu_irfan88",
   },
   {
     name: "linkedIn",
-    url: "https://www.linkedin.com/in/thesuleman",
+    url: "https://www.linkedin.com/in/mu-irfan88/",
   },
 ];
 
 export const TRANSITION_DELAY = 0.4;
 
-export const BLOGS = [
-  {
-    id: 1,
-    title: " Accessible clickable card",
-    codepenDemo: "Codepen Demo",
-    url: "https://codepen.io/sulemankhann/pen/GRjJZqL",
-    desc: "Clickable cards with multiple childs links",
-    CSS: "CSS",
-  },
-  {
-    id: 2,
-    title: " Accessible clickable card",
-    codepenDemo: "Codepen Demo",
-    url: "https://codepen.io/sulemankhann/pen/GRjJZqL",
-    desc: "Clickable cards with multiple childs links",
-    CSS: "CSS",
-  },
-  {
-    id: 3,
-    title: " Accessible clickable card",
-    codepenDemo: "Codepen Demo",
-    url: "https://codepen.io/sulemankhann/pen/GRjJZqL",
-    desc: "Clickable cards with multiple childs links",
-    CSS: "CSS",
-  },
-  {
-    id: 4,
-    title: " Accessible clickable card",
-    codepenDemo: "Codepen Demo",
-    url: "https://codepen.io/sulemankhann/pen/GRjJZqL",
-    desc: "Clickable cards with multiple childs links",
-    CSS: "CSS",
-  },
-];
-
 export const WORKED_HISTORY = [
   {
     tab: [
       {
-        tabTitle: "Upstatement",
+        tabTitle: "Devorium",
         tabContent: [
           {
-            title: "Lead Engineer",
-            linkText: "@ Upstatement",
+            title: "Internee",
+            linkText: "@ Devorium",
             link: "https://upstatement.com/",
-            date: "May 2018 - Present",
+            date: "Aug 2022 - Oct 2022",
             content: [
-              "Deliver high-quality, robust production code for a diverse array of projects for clients including Harvard Business School, Everytown for Gun Safety, Pratt Institute, Koala Health, Vanderbilt University, The 19th News, and more",
-              "Work alongside creative directors to lead the research, development, and architecture of technical solutions to fulfill business requirements",
-              "Collaborate with designers, project managers, and other engineers to transform creative concepts into production realities for clients and stakeholders",
-              "Provide leadership within engineering department through close collaboration, knowledge shares, and mentorship",
+              "Gained a solid foundation in web development, mastering HTML, CSS, Tailwind, Javascript, and React during an intensive internship at Devorium Software.",
+              "Coordinated communications between multiple development teams.",
+              "Proactively sought guidance from experienced developers and mentors to enhance technical proficiency and deepen understanding of software development practices.",
             ],
           },
         ],
@@ -95,77 +59,18 @@ export const WORKED_HISTORY = [
   {
     tab: [
       {
-        tabTitle: "Apple",
+        tabTitle: "Devorium",
         tabContent: [
           {
-            title: "UI Engineer Co-op",
-            linkText: "@ Apple",
+            title: "Frontend Developer",
+            linkText: "@ Devorium",
             link: "https://www.apple.com/apple-music/",
-            date: "July - December 2017",
+            date: "Nov 2022 - Present",
             content: [
-              "Developed and styled interactive web applications for Apple Music using Ember and SCSS",
-              "Built and shipped the Apple Music Extension for Facebook Messenger leveraging third-party and internal API integrations",
-              "Architected and implemented the user interface of Apple Music's embeddable web player widget for in-browser user authorization and full song playback",
-              "Contributed extensively to the creation of MusicKit JS, a public-facing JavaScript SDK for embedding Apple Music players into web applications",
-            ],
-          },
-        ],
-      },
-    ],
-  },
-  {
-    tab: [
-      {
-        tabTitle: "Scout Studio",
-        tabContent: [
-          {
-            title: "Developer",
-            linkText: "@ Scout Studio",
-            link: "https://web.northeastern.edu/scout/",
-            date: "Spring 2016 & 2017",
-            content: [
-              "Collaborated with other student designers and engineers on pro-bono projects to create new brands, design systems, and websites for organizations in the community",
-              "Built and delivered technical solutions according to stakeholder business requirements",
-            ],
-          },
-        ],
-      },
-    ],
-  },
-  {
-    tab: [
-      {
-        tabTitle: "Starry",
-        tabContent: [
-          {
-            title: "Software Engineer Co-op",
-            linkText: "@ Starry",
-            link: "https://starry.com/",
-            date: "July - December 2016",
-            content: [
-              "Engineered and improved major features of Starry's customer-facing Android web app using ES6, Handlebars, Backbone, Marionette, and CSS",
-              "Proposed and implemented scalable solutions to issues identified with cloud services and applications responsible for communicating with the Starry Station internet router",
-              "Collaborated with designers and other developers to ensure thoughtful and consistent user experiences across Starry’s iOS and Android mobile apps",
-            ],
-          },
-        ],
-      },
-    ],
-  },
-  {
-    tab: [
-      {
-        tabTitle: "MullenLowe",
-        tabContent: [
-          {
-            title: "Creative Technologist Co-op",
-            linkText: "@ MullenLowe",
-            link: "https://us.mullenlowe.com/",
-            date: "July - December 2015",
-            content: [
-              "Developed, maintained, and shipped production code for client websites primarily using HTML, CSS, Sass, JavaScript, and jQuery",
-              "Performed quality assurance tests on various sites to ensure cross-browser compatibility and mobile responsiveness",
-              "Clients included JetBlue, Lovesac, U.S. Cellular, U.S. Department of Defense, and more",
+              "Transforming captivating UI designs into seamless and responsive front-end experiences using React, Next.js, tailwind, and the power of code translation.",
+              "Crafting scalable and reusable business logic components to drive efficiency and innovation in web development.",
+              "React, Next.js, and Tailwind CSS to architect cutting-edge web applications that deliver optimal user experiences and drive business success.",
+              "Delivered high-quality code, consistently meeting project requirements and ensuring optimal performance of web applications.",
             ],
           },
         ],
@@ -174,10 +79,109 @@ export const WORKED_HISTORY = [
   },
 ];
 export const SKILLS = [
+  "Tailwind",
   "JavaScript (ES6+)",
   "TypeScript",
-  "React",
-  "Eleventy",
-  "Node.JS",
-  "Wordpress",
+  "React.js",
+  "Next.js",
+  "Node.js",
+  "Git & Github",
+  "Firebase",
+];
+
+export const FEATURED_PROJECTS = [
+  {
+    name: "Watch Farm",
+    description:
+      "Watch Farm is a special online auction and private sales platform devoted to prestige and luxury timepieces.",
+    imageSrc: {
+      src: "/images/watchfarm.png",
+      alt: "Watch Farm",
+    },
+    technologies: ["React", "Next.js", "Tailwind"],
+    source: "https://watchfarm.com.hk/",
+  },
+  {
+    name: "Nutshell News",
+    description:
+      "Nutshell is your go-to news app to stay updated. Get the latest headlines from all your favourite sources, all in one place.",
+    imageSrc: {
+      src: "/images/nutshell.png",
+      alt: "Nutshell news",
+    },
+    technologies: ["Next.js", "Tailwind", "Strapi"],
+    source: "https://nutshell-news-main.vercel.app/",
+  },
+  {
+    name: "Super Truth",
+    description:
+      "Super truth is an web app that allows organizations to create and manage their users and their roles.",
+    imageSrc: {
+      src: "/images/supertruth.png",
+      alt: "Nutshell news",
+    },
+    technologies: ["Next.js", "Tailwind"],
+    source: "https://nutshell-news-main.vercel.app/",
+  },
+  {
+    name: "Build Planner",
+    description:
+      "Build Planner is project and resource scheduling for construction.",
+    imageSrc: {
+      src: "/images/buildplanner.png",
+      alt: "Nutshell news",
+    },
+    technologies: ["React", "Redux-Saga", "CSS"],
+    source: "https://nutshell-news-main.vercel.app/",
+  },
+];
+
+export const NOTEWORTHY_PROJECTS = [
+  {
+    name: "Driving School System",
+    description:
+      "Driving school system for students and staffs. This allow both students and staff to work together and manage their records.",
+    imageSrc: {
+      src: "/images/watchfarm.png",
+      alt: "Watch Farm",
+    },
+    technologies: ["React", "Bootstrap", "Node.js", "Express.js"],
+    source: "https://kohat-driving-school-fyp.netlify.app/",
+  },
+  {
+    name: "Leetcode Solutions",
+    description:
+      "Leetcode solutions is a web app that allows users to search for leetcode problems and their solutions.",
+    imageSrc: {
+      src: "/images/nutshell.png",
+      alt: "Nutshell news",
+    },
+    technologies: ["Next.js", "Tailwind"],
+    source: "https://leetcode-solver.vercel.app/",
+  },
+];
+
+export const BLOGS_DATA = [
+  {
+    id: 1,
+    name: "Accessible clickable card",
+    description: "Clickable cards with multiple childs links",
+    url: "https://codepen.io/lbyulzxi-the-builder",
+    slug: {
+      current: "accessible-clickable-card",
+    },
+    technologies: ["Next.js", "Tailwind", "Strapi"],
+    publishedDate: "2021-08-20T00:00:00.000Z",
+  },
+  {
+    id: 2,
+    name: "Accessible clickable card",
+    description: "Clickable cards with multiple childs links",
+    url: "https://codepen.io/lbyulzxi-the-builder",
+    slug: {
+      current: "accessible-clickable-card",
+    },
+    technologies: ["Next.js", "Tailwind", "Strapi"],
+    publishedDate: "2021-08-20T00:00:00.000Z",
+  },
 ];

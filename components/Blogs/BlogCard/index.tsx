@@ -2,9 +2,12 @@
 import React from "react";
 import { CiBookmark } from "react-icons/ci";
 import Link from "next/link";
-import { BlogPage } from "../../../types";
 
-const Blog: React.FC<{ blog: BlogPage }> = ({ blog }) => {
+interface IProps {
+  blog: any;
+}
+
+const Blog = ({ blog }: IProps) => {
   return (
     <>
       <Link
