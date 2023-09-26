@@ -14,7 +14,7 @@ export default async function RootLayout({
         <title>Muhammad Irfan</title>
         <meta property="og:title" content="Muhammad Irfan" />
         <meta property="og:description" content="Muhammad Irfan portfolio" />
-        <meta property="og:image" content="/images/OT.png" />
+        <meta property="og:image" content="/public/images/OG.png" />
       </Head>
       <body
         className={`${inter.variable} ${firaCode.variable} ${calibre.variable} ${sfMono.variable}`}
