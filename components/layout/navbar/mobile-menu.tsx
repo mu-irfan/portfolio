@@ -47,7 +47,7 @@ export const MobileMenu: React.FC<IMobileMenuProps> = ({
                 </li>
               </Link>
             ))}
-            <Link href="/" className="!mt-12">
+            <Link href="https://drive.google.com/file/d/1WfexDJL2Bn6PL164fOHDfE-GqAbuhZny/view?usp=sharing" className="!mt-12">
               <button className="inline-block font-mono border rounded-[4px] leading-[0.9] text-green border-green transition-all hover:shadow-outline-green hover:-translate-x-1 hover:-translate-y-1 text-sm px-4 py-3 text-[13px]">
                 Resume
               </button>

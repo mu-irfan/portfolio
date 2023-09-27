@@ -6,7 +6,7 @@ import { FEATURED_PROJECTS } from "@/config/constants";
 export const FeaturedProjects = () => {
   return (
     <section className="max-w-5xl mx-auto md:mt-12" id="work">
-      <Title prefix="03.">Some Things I’ve Built</Title>
+      <Title prefix="03.">Things I’ve Built</Title>
       <div className="space-y-8 lg:space-y-28">
         {FEATURED_PROJECTS.map((project, index) => (
           <Card
