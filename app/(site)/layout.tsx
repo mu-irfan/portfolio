@@ -1,7 +1,28 @@
 import "../globals.css";
 import { calibre, firaCode, inter, sfMono } from "@/config/fonts";
 import { Footer, Navbar, Sides } from "@/components";
-import Head from "next/head";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Muhammad Irfan",
+  description: "Muhammad Irfan Portfolio",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://muhammad-irfan.vercel.app/",
+    title: "Muhammad Irfan",
+    description: "Muhammad Irfan Portfolio",
+    images: [
+      {
+        url: "/images/OG.png",
+        width: 1200,
+        height: 630,
+        alt: "Muhammad Irfan",
+      },
+    ],
+  },
+  }
+
 
 export default async function RootLayout({
   children,
@@ -10,14 +31,6 @@ export default async function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Head>
-        <title>Muhammad Irfan</title>
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Muhammad Irfan" />
-        <meta property="og:description" content="Muhammad Irfan portfolio" />
-        <meta property="og:url" content="https://muhammad-irfan.vercel.app/" />
-        <meta property="og:image" content="/public/images/OG.png" />
-      </Head>
       <body
         className={`${inter.variable} ${firaCode.variable} ${calibre.variable} ${sfMono.variable}`}
       >
@@ -32,3 +45,4 @@ export default async function RootLayout({
     </html>
   );
 }
+
