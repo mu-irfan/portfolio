@@ -39,17 +39,16 @@ export const WORKED_HISTORY = [
   {
     tab: [
       {
-        tabTitle: "Devorium",
+        tabTitle: "Typent",
         tabContent: [
           {
-            title: "Internee",
-            linkText: "@ Devorium",
-            link: "https://upstatement.com/",
-            date: "Aug 2022 - Oct 2022",
+            title: "React Developer",
+            linkText: "@ Typent",
+            link: "https://www.typent.com/",
+            date: "01 Nov 2023 - 30 Nov 2023",
             content: [
-              "Gained a solid foundation in web development, mastering HTML, CSS, Tailwind, Javascript, and React during an intensive internship at Devorium Software.",
-              "Coordinated communications between multiple development teams.",
-              "Proactively sought guidance from experienced developers and mentors to enhance technical proficiency and deepen understanding of software development practices.",
+              "Translate figma UI designs into responsive front-end experiences using Next.js and tailwindCSS.",
+              "Delivered high-quality code, consistently meeting project requirements and ensuring optimal performance of web applications.",
             ],
           },
         ],
@@ -64,13 +63,33 @@ export const WORKED_HISTORY = [
           {
             title: "Frontend Developer",
             linkText: "@ Devorium",
-            link: "https://www.apple.com/apple-music/",
-            date: "Nov 2022 - Present",
+            link: "https://devorium.vercel.app/",
+            date: "01 Nov 2022 - 30 Sep 2023",
             content: [
               "Transforming captivating UI designs into seamless and responsive front-end experiences using React, Next.js, tailwind, and the power of code translation.",
               "Crafting scalable and reusable business logic components to drive efficiency and innovation in web development.",
               "React, Next.js, and Tailwind CSS to architect cutting-edge web applications that deliver optimal user experiences and drive business success.",
               "Delivered high-quality code, consistently meeting project requirements and ensuring optimal performance of web applications.",
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    tab: [
+      {
+        tabTitle: "Devorium",
+        tabContent: [
+          {
+            title: "Internee",
+            linkText: "@ Devorium",
+            link: "https://devorium.vercel.app/",
+            date: "01 Aug 2022 - 30 Oct 2022",
+            content: [
+              "Gained a solid foundation in web development, mastering HTML, CSS, Tailwind, Javascript, and React during an intensive internship at Devorium Software.",
+              "Coordinated communications between multiple development teams.",
+              "Proactively sought guidance from experienced developers and mentors to enhance technical proficiency and deepen understanding of software development practices.",
             ],
           },
         ],
