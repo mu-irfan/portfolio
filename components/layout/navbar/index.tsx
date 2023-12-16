@@ -90,7 +90,7 @@ export const Navbar: React.FC<IHeaderProps> = ({ className }) => {
             }}
             className="ml-4"
           >
-            <Link href="https://drive.google.com/file/d/1WfexDJL2Bn6PL164fOHDfE-GqAbuhZny/view?usp=sharing" className="reset-link" target="_blank">
+            <Link href="https://drive.google.com/file/d/1Y2mm1eKT5r-QaY9fz6T-MD4XnNnsHzFk/view?usp=sharing" className="reset-link" target="_blank">
               <Button size="sm">Resume</Button>
             </Link>
           </motion.div>
