@@ -132,15 +132,15 @@ export const FEATURED_PROJECTS = [
     source: "https://nutshell-news-main.vercel.app/",
   },
   {
-    name: "Super Truth",
+    name: "KATA",
     description:
-      "Super truth is an web app that allows organizations to create and manage their users and their roles.",
+      "KATA is the Engineering Operations Platform. For Modern Teams.",
     imageSrc: {
-      src: "/images/supertruth.png",
-      alt: "Nutshell news",
+      src: "/images/kata.png",
+      alt: "KATA",
     },
-    technologies: ["Next.js", "Tailwind"],
-    source: "https://nutshell-news-main.vercel.app/",
+    technologies: ["React", "Tailwind"],
+    source: "https://www.getkata.com/",
   },
   {
     name: "Build Planner",
@@ -151,7 +151,7 @@ export const FEATURED_PROJECTS = [
       alt: "Nutshell news",
     },
     technologies: ["React", "Redux-Saga", "CSS"],
-    source: "https://nutshell-news-main.vercel.app/",
+    source: "https://buildplanner.com/",
   },
 ];
 
