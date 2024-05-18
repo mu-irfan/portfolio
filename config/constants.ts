@@ -36,6 +36,48 @@ export const SOCIAL_LINKS = [
 export const TRANSITION_DELAY = 0.4;
 
 export const WORKED_HISTORY = [
+   {
+    tab: [
+      {
+        tabTitle: "Greenage Services",
+        tabContent: [
+          {
+            title: "Software Developer",
+            linkText: "@ Greenage Services",
+            link: "https://green-ages.com/",
+            date: "08 May 2024 - Present",
+            content: [
+              "Write clean and scalable code for farmer dashboard.",
+              "Create reusable components for business logics to drive efficiency and innovation in web development.",
+              "Interact with backend developer for successful API integration.",
+              "Next.js and Tailwind CSS to architect cutting-edge web applications that deliver optimal user experiences and drive business success.",
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    tab: [
+      {
+        tabTitle: "Freelance",
+        tabContent: [
+          {
+            title: "Software Developer",
+            linkText: "@ Freelancer",
+            link: "",
+            date: "01 Dec 2023 - 30 Apr 2024",
+            content: [
+              "Convert UI designs to professional applications with help of React and Tailwind CSS",
+              "Create reusable components for business logics to drive efficiency and innovation in web development.",
+              "Worked with React, Nextjs, MUI, ChakraUI, TaiwlindCSS, Firebase, Git & Github.",
+              "Create API's with Nodejs, Expressjs and MongoDB.",
+            ],
+          },
+        ],
+      },
+    ],
+  },
   {
     tab: [
       {
